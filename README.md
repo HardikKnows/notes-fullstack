@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Full Stack Notes App
 
-## Getting Started
+A simple full-stack Notes application built as part of an interview assignment.  
+The app allows users to create, view, edit, and delete notes with data stored persistently in MongoDB.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Tech Stack
+
+- **Next.js** (App Router – frontend & backend)
+- **MongoDB Atlas**
+- **Mongoose**
+- **Tailwind CSS**
+- **TypeScript**
+
+---
+
+## ✨ Features
+
+- Create a new note
+- View all saved notes
+- Edit existing notes
+- Delete notes
+- Automatic creation timestamps
+- Clean and responsive UI
+
+---
+
+## 🧠 Architecture Overview
+
+- Frontend and backend are handled within a single **Next.js** project
+- REST APIs implemented using **Next.js Route Handlers**
+- **MongoDB Atlas** used for cloud-based persistent storage
+- **Environment variables** used for secure configuration
+
+---
+
+## 📁 Project Structure
+
+notes-fullstack/
+├── app/
+│ ├── api/notes/route.js
+│ └── page.tsx
+├── lib/
+│ └── mongodb.js
+├── models/
+│ └── Note.js
+├── public/
+├── .gitignore
+├── package.json
+└── README.md
+
+
+---
+
+## ⚙️ Setup Instructions
+
+1. Clone the repository
+
+git clone https://github.com/<your-username>/notes-fullstack.git
+cd notes-fullstack
+
+2. Install dependencies
+
+npm install
+
+3. Create a .env.local file in the root directory
+
+MONGODB_URI=your_mongodb_atlas_connection_string
+
+4. Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open the app in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Environment Example
 
-## Learn More
+Create a file named .env.example in the root directory and add:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MONGODB_URI=your_mongodb_connection_string_here
